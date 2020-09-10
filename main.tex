@@ -1,6 +1,6 @@
 \documentclass[b5paper,11pt]{ctexbook}
 \usepackage{fontspec,xeCJK,graphicx,setspace,pdfpages}
-\usepackage[b5paper,margin=25mm]{geometry}
+\usepackage[b5paper,margin=30mm]{geometry}
 \usepackage[all]{nowidow}
 \usepackage{caption}
 \author{喇嘛歐雷‧尼達爾}
@@ -8,14 +8,15 @@
 
 \input{commands}
 
-\setmainfont{Adobe Text Pro}
-\setCJKmainfont{Source Han Serif TC}
+\setmainfont{Helvetica Neue}
+\setCJKmainfont{PingFangTC-Regular}
 \setCJKsansfont{PingFangTC-Light}
 \setsansfont[Scale=1.1]{HelveticaNeue-Light}
 \captionsetup{labelformat=empty,font=sf}
 
 \begin{document}
 \includepdf{graphics/title-page.pdf}
+\tableofcontents
 \input{chapter_one}
 \input{chapter_two}
 \input{chapter_three}
