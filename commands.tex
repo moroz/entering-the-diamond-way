@@ -6,13 +6,37 @@
   \end{figure}
 }
 
-\newcommand{\genericFigure}[2]{%
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\textwidth]{#1}
-  \caption{#2}
-\end{figure}
+\newcommand{\fullPageFigure}[2]{%
+  \thispagestyle{empty}
+  \begin{figure}[p]
+    \centering
+    \makebox[\textwidth]{%
+      \includegraphics[height=\textheight]{#1}
+    }
+    \caption{#2}
+  \end{figure}
 }
+
+\newcommand{\fullPageHorizontalFigure}[2]{%
+  \thispagestyle{empty}
+  \begin{figure}[p]
+  \makebox[\textwidth]{%
+    \includegraphics[width = \paperwidth+1mm]{#1}
+  }
+  \caption{#2}
+  \end{figure}
+}
+
+\newcommand{\fullWidthFigure}[2]{%
+  \begin{figure}[t]
+  \makebox[\textwidth]{%
+    \includegraphics[width = \paperwidth+1mm]{#1}
+  }
+  \caption{#2}
+  \end{figure}
+}
+
+\newcommand{\genericFigure}[2]{\fullWidthFigure{#1}{#2}}
 
 \newcommand{\twocolumnFig}[4]{%
 \begin{figure}[h]

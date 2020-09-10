@@ -3,3 +3,5 @@
 main.pdf
 *.synctex.gz
 auto/
+*.fls
+*.fdb_latexmk
