@@ -5,3 +5,10 @@ main.pdf
 auto/
 *.fls
 *.fdb_latexmk
+*.html
+!epub.tex
+epub.*
+*.4tc
+*.4ct
+*.tmp
+*.xref
