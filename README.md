@@ -33,8 +33,10 @@ Noto Serif TC and Source Serif 4, both under the SIL Open Font License (licences
 
 ## Releases
 
-Each release on GitHub carries both PDFs under their build names, timestamp and commit
-included. Never rename them to fixed names.
+`./build-release.sh` builds both themes from the pushed `master` and publishes them as a
+GitHub release tagged `v<YYYY.MM.DD>` (or the tag given as its argument). It needs `gh`
+signed in, a clean working copy and `master` pushed. The assets keep their build names,
+timestamp and commit included; never rename them to fixed names.
 
 The LaTeX edition this was converted from (2022–2024, `main.tex` and `chapter_*.tex`) is
 in git history up to commit 7a3c7cf0.
