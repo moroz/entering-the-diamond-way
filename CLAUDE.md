@@ -2,7 +2,9 @@
 
 Typst book for reading on an iPad / OLED phone (see README.md).
 
-- **Build with `mise run build`** (or `./build.sh`): both themes into `out/` (git-ignored).
+- **Build with `mise run build`** (or `./build.sh`): both themes into `out/` (git-ignored),
+  named `entering-<YYYYMMDD-HHMM>-<sha>[-dirty]-<theme>.pdf`. Release assets keep these
+  names; commit before building one to release, so it isn't `-dirty`.
   Fonts are downloaded by `fetch-fonts.sh` into `fonts/`; never commit the `.ttf` files.
   Check a change by rendering the affected pages (`pdftoppm -png -f N -l N`), not just by
   compiling; after layout changes, look at every page with a photo.

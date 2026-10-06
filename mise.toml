@@ -2,5 +2,5 @@
 typst = "0.15"
 
 [tasks.build]
-description = "Compiles the book to out/entering-{dark,light}.pdf"
+description = "Compiles the book to out/entering-<YYYYMMDD-HHMM>-<sha>[-dirty]-{dark,light}.pdf"
 run = "./build.sh"

@@ -9,8 +9,13 @@ a light theme.
 With [mise](https://mise.jdx.dev/):
 
 ```sh
-mise run build    # → out/entering-dark.pdf and out/entering-light.pdf
+mise run build    # → out/entering-<YYYYMMDD-HHMM>-<sha>[-dirty]-{dark,light}.pdf
 ```
+
+The PDF's name carries the local build time and the short commit id it was built from
+(jj's `@-`, or `HEAD` in a plain git clone), plus `-dirty` when the working copy has
+uncommitted changes, so every copy can be traced to its source. Commit before building
+one to share.
 
 Without mise, `./build.sh` (needs Typst 0.15 on `PATH` and `curl`); `./build.sh light`
 builds one theme. The first build downloads the fonts into `fonts/` (`fetch-fonts.sh`):
@@ -25,6 +30,11 @@ Noto Serif TC and Source Serif 4, both under the SIL Open Font License (licences
 - `chapters/`: one file per chapter (`01.typ` … `19.typ`).
 - `figures/`: the photographs.
 - `entering.indd`: an earlier InDesign layout.
+
+## Releases
+
+Each release on GitHub carries both PDFs under their build names, timestamp and commit
+included. Never rename them to fixed names.
 
 The LaTeX edition this was converted from (2022–2024, `main.tex` and `chapter_*.tex`) is
 in git history up to commit 7a3c7cf0.
